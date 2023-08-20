@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$" xml:lang="$lang$"$if(dir)$ dir="$dir$"$endif$>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+$for(author-meta)$
+  <meta name="author" content="$author-meta$" />
+$endfor$
+$if(date-meta)$
+  <meta name="dcterms.date" content="$date-meta$" />
+$endif$
+$if(keywords)$
+  <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
+$endif$
+  <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+  <style>
+    $styles.html()$
+
+    aside a.top {
+  font-size: 0;
+  position: fixed;
+  bottom: 0;
+  font-weight: bold;
+  width: 180px;
+  padding: .6em 0;
+  margin-bottom: 0;
+  border-radius: .3em .3em 0 0;
+  transition: all .3s ease;
+}
+
+aside a.top.visible {
+  font-size: 1em;
+}
+
+aside .links a.button {
+  text-align: left;
+}
+
+@media all and (max-width: 1000px) {
+  aside a.pseudo.top {
+    background: rgba(255, 255, 255, .8);
+    width: 100%;
+    left: 0;
+    text-align: center;
+    z-index: 100;
+  }
+}
+
+.post article > h2 {
+  margin: -2em 0 .6em;
+  padding: 3em 0 0;
+  line-height: 1;
+}
+
+.post article > h3 {
+  margin-bottom: .6em;
+}
+
+.post aside h2 {
+  margin-top: 0;
+  padding: 1.25em 0;
+  line-height: 1;
+}
+
+.post aside a.pseudo {
+  color: #0074D9;
+  margin: 0;
+}
+
+.post > section {
+  background: #fff;
+  text-align: left;
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 80px 0 0;
+}
+
+.post article > h1 {
+  margin: 0;
+  padding: 0.6em 0;
+  font-size: 2em;
+  line-height: 1.5;
+}
+
+.post aside a.button {
+  display: block;
+}
+
+.post pre[class*="language-"] {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.post .index pre {
+  margin: 0;
+  font-size: .9em;
+}
+
+  </style>
+$for(css)$
+  <link rel="stylesheet" href="$css$" />
+$endfor$
+$if(math)$
+  $math$
+$endif$
+$for(header-includes)$
+  $header-includes$
+$endfor$
+</head>
+<body>
+
+</nav>
+<nav><a href="/" class="brand"><span>Singularity Labs</span></a><input id="bmenu" type="checkbox" class="show"><label for="bmenu" class="burger toggle pseudo button">menu</label><div class="menu"><a href="https://github.com/The-Singularity-Lab" target="_blank" class="pseudo button icon-g">GitHub</a><a href="./post" class="button icon-file-code">rss</a></div></nav>
+<main id="home" class="post">
+<section class="flex five" >
+  <article class="full four-fifth-1000">
+    $if(title)$
+    <h1 class="title">$title$</h1>
+    $if(date)$
+    <p class="date">$date$</p>
+    $endif$
+    </header>
+    $endif$
+  $body$
+  <div style="text-align: center; margin-top: 20px;">
+    <p style="font-style: italic;">Fingers to the keys and shadows to the wind,</p>
+    <p>Pescennius</p>
+    </div>
+  </article>
+</section>
+</main>
+$for(include-after)$
+$include-after$
+$endfor$
+</body>
+</html>
