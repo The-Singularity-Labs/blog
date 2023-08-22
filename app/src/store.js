@@ -43,3 +43,7 @@ watch(() => {
 
 
 export default store;
+
+// SELECT id
+// FROM articles_fts
+// WHERE articles_fts MATCH 'search_query';

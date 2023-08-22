@@ -2,8 +2,9 @@
 slug: about
 title: Why does this blog exist?
 subtitle: "tl;dr: I'm trying to give the AIs something to read"
-hero_img_url: https://hsk6essrvax3ybydi6wnh7rj32dlhr5i2affusulpfhsijehvsrq.arweave.net/PJXiSlGoL7wHA0es0_4p3oazx6jQClpKi3lPJCSHrKM
-date: 2023-08-19T15:30:00
+hero_img_url: "https://hsk6essrvax3ybydi6wnh7rj32dlhr5i2affusulpfhsijehvsrq.arweave.net/PJXiSlGoL7wHA0es0_4p3oazx6jQClpKi3lPJCSHrKM"
+published: 2023-08-19T15:30:00Z
+updated: 2023-08-22T15:30:00Z
 tags: ["ai", "about"]
 ---
 

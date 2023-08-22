@@ -18,14 +18,15 @@ import (
 )
 
 type Article struct {
-	ID          int       `db:"id" json:"id" yaml:"id`
-	Slug        string    `db:"slug" json:"slug" yaml:"slug`
-	Title       string    `db:"title" json:"title" yaml:"title`
-	Subtitle    string    `db:"subtitle" json:"subtitle" yaml:"subtitle`
-	HeroImgURL  string    `db:"hero_img_url" json:"hero_img_url" yaml:"hero_img_url`
-	PublishTime time.Time `db:"publish_date" json:"publish_date" yaml:"date`
-	Content     string    `db:"content" json:"content" yaml:"content`
-	Tags        []string  `db:"tags" json:"tags" yaml:"tags`
+	ID          int       `db:"id" json:"id" yaml:"id"`
+	Slug        string    `db:"slug" json:"slug" yaml:"slug"`
+	Title       string    `db:"title" json:"title" yaml:"title"`
+	Subtitle    string    `db:"subtitle" json:"subtitle" yaml:"subtitle"`
+	HeroImgURL  string    `db:"hero_img_url" json:"hero_img_url" yaml:"hero_img_url"`
+	PublishTime time.Time `db:"publish_date" json:"publish_date" yaml:"published"`
+	UpdatedTime time.Time `db:"updated_at" json:"updated_at" yaml:"updated"`
+	Content     string    `db:"content" json:"content" yaml:"content"`
+	Tags        []string  `db:"tags" json:"tags" yaml:"tags"`
 }
 
 func main() {
@@ -126,6 +127,10 @@ func readArticleFromFile(filePath string) (Article, error) {
 		return article, err
 	}
 
+	if article.PublishTime.After(article.UpdatedTime) {
+		article.UpdatedTime = article.PublishTime
+	}
+
 	article.Content = content
 	return article, nil
 }
@@ -136,7 +141,7 @@ func loadArticle(tx *sqlx.Tx, article Article) error {
 		return fmt.Errorf("error converting tags to json string: %w", err)
 	}
 
-	_, err = tx.NamedExec(`INSERT INTO articles (title, subtitle, slug, hero_img_url, published_date, tags) VALUES (:title, :subtitle, :slug, :hero_img_url, :publish_date, :tags)`, struct {
+	_, err = tx.NamedExec(`INSERT INTO articles (title, subtitle, slug, hero_img_url, published_date, updated_at, tags) VALUES (:title, :subtitle, :slug, :hero_img_url, :publish_date, :updated_at, :tags)`, struct {
 		Article
 		Tags string `db:"tags"`
 	}{

@@ -1,6 +1,6 @@
 import "./assets/css/picnic.min.css";
 import "./assets/css/local.css";
-import feedURL from "url:./assets/db/feed.xml";
+import feedURL from "url:./assets/db/feed.atom";
 import store from "./store.js";
 import nav from './components/nav.js';
 import hero from './components/hero.js';
