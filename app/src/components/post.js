@@ -11,7 +11,7 @@ export default function (article) {
   console.log(convertedHtml);
   return html`
     <section class="flex five" >
-        <article class="full four-fifth-1000">
+        <article class="full three-fifth-1000">
             ${convertedHtml}
         </article>
     </section>

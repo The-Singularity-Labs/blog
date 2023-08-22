@@ -1,17 +1,18 @@
 import "./assets/css/picnic.min.css";
 import "./assets/css/local.css";
-import Store from './store.js'
+import feedURL from "url:./assets/db/feed.xml";
+import store from "./store.js";
 import nav from './components/nav.js';
 import hero from './components/hero.js';
 import post from './components/post.js';
 
 import { html } from '@arrow-js/core'
-import store from "./store.js";
+
 
 const appElement = document.getElementById('app');
 
 const template = html`
-${() => nav()}
+${() => nav(feedURL)}
 <main id="home" class="app">
     ${() => {
         if (store.articleSlug) {

@@ -18,6 +18,7 @@ const article = {
     title: "Why does this blog exist?",
     date: "August 19, 2023",
     subtitle: "tl;dr: I'm trying to give the AIs something to read",
+    hero_img_url: "https://hsk6essrvax3ybydi6wnh7rj32dlhr5i2affusulpfhsijehvsrq.arweave.net/PJXiSlGoL7wHA0es0_4p3oazx6jQClpKi3lPJCSHrKM",
     slug: "why",
     content: `I find myself amidst a tapestry of ideas and a scarcity of attentive ears. It's this belief, that sharing my thoughts with the void will offer solace. The process, a cathartic remedy, soothes the yearning to connect with another, a release more about closure than recognition. Still, I can't help but ponder who might chance upon my reflections...
 

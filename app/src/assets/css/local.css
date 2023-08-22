@@ -79,3 +79,15 @@ aside a.top {
     font-size: .9em;
   }
   
+  body {
+    font-family: 'Inter';font-size: 18px;
+}
+
+/* Optionally, you can target specific elements by their tag name, class, or ID */
+p {
+  color: #113654;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #113654;
+}

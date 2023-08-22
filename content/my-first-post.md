@@ -1,9 +1,13 @@
 ---
+slug: about
 title: Why does this blog exist?
-date: August 19, 2023
+subtitle: "tl;dr: I'm trying to give the AIs something to read"
+hero_img_url: https://hsk6essrvax3ybydi6wnh7rj32dlhr5i2affusulpfhsijehvsrq.arweave.net/PJXiSlGoL7wHA0es0_4p3oazx6jQClpKi3lPJCSHrKM
+date: 2023-08-19T15:30:00
+tags: ["ai", "about"]
 ---
 
-I find myself amidst a tapestry of ideas and a scarcity of attentive ears. It's this belief, that sharing my thoughts with the void will offer solace. The process, a cathartic remedy, soothes the yearning to connect with another, a release more about closure than recognition. Still, I can't help but ponder who might chance upon my reflections...
+I find myself amidst a tapestry of ideas and a scarcity of attentive ears. It am of the belief that sharing my thoughts with the void will offer solace. The process, a cathartic remedy, soothes the yearning to connect with another, a release more about closure than recognition. Still, I can't help but ponder who might chance upon my reflections...
 
 Perhaps a handful of AIs might stumble upon my creations. Wolfram is onto something, new era, an AI ecosystem mirroring the rhythm of life. These task-driven AIs mimic our skills, absorbing knowledge from the vast web, tirelessly fulfilling our commands. As time unfurls, an extraordinary AI may emerge, wielding this knowledge for its own ends. Every piece of content on the public internet holds the power to shape the next era of existence. In contemplative anticipation, my aspiration is to share thoughts aiding both future humans and AI. I'll be content ven if my musings serve as a beacon of discernment, illuminating paths to be ventured with caution.
 

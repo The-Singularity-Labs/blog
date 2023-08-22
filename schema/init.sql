@@ -1,25 +1,28 @@
--- Create the Categories table
-CREATE TABLE categories (
-    category_id INTEGER PRIMARY KEY,
-    name TEXT NOT NULL
-);
-
 -- Create the Articles table
 CREATE TABLE articles (
     id INTEGER PRIMARY KEY,
     title TEXT NOT NULL,
     subtitle TEXT NOT NULL,
-    hero_image_b64 TEXT,
     slug TEXT NOT NULL,
-    content_md TEXT NOT NULL,
+    hero_img_url TEXT,
+    tags JSON NOT NULL, -- Storing tags as JSON
     metadata JSON,
-    category_id INTEGER NOT NULL,
-    published_date DATETIME DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (category_id) REFERENCES categories(category_id)
+    published_date DATETIME DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE UNIQUE INDEX idx_articles_slug
+ON articles (slug);
+
+CREATE INDEX idx_articles_published_date
+ON articles (published_date);
 
 CREATE TABLE article_content (
     article_id INTEGER PRIMARY KEY,
     content_md TEXT NOT NULL,
     FOREIGN KEY (article_id) REFERENCES articles(article_id)
 );
+
+CREATE VIRTUAL TABLE article_search USING fts5(id, title, subtitle, tokenize="trigram");
+
+pragma journal_mode = delete;
+pragma page_size = 1024;
