@@ -1,6 +1,7 @@
 -- Create the Articles table
 CREATE TABLE articles (
     id INTEGER PRIMARY KEY,
+    author TEXT NOT NULL,
     title TEXT NOT NULL,
     subtitle TEXT NOT NULL,
     slug TEXT NOT NULL,

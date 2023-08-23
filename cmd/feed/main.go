@@ -76,7 +76,7 @@ func main() {
 			defer db.Close()
 
 			articles := []Article{}
-			err = db.Select(&articles, `SELECT id, slug, title, subtitle, hero_img_url, published_date as publish_date, updated_at FROM articles;`)
+			err = db.Select(&articles, `SELECT id, slug, title, subtitle, hero_img_url, published_date as publish_date, updated_at FROM articles LIMIT 20;`)
 			if err != nil {
 				return fmt.Errorf("error getting articles: %w", err)
 			}

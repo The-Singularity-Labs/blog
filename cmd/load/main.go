@@ -20,6 +20,7 @@ import (
 type Article struct {
 	ID          int       `db:"id" json:"id" yaml:"id"`
 	Slug        string    `db:"slug" json:"slug" yaml:"slug"`
+	Author      string    `db:"author" json:"author" yaml:"author"`
 	Title       string    `db:"title" json:"title" yaml:"title"`
 	Subtitle    string    `db:"subtitle" json:"subtitle" yaml:"subtitle"`
 	HeroImgURL  string    `db:"hero_img_url" json:"hero_img_url" yaml:"hero_img_url"`
@@ -141,7 +142,7 @@ func loadArticle(tx *sqlx.Tx, article Article) error {
 		return fmt.Errorf("error converting tags to json string: %w", err)
 	}
 
-	_, err = tx.NamedExec(`INSERT INTO articles (title, subtitle, slug, hero_img_url, published_date, updated_at, tags) VALUES (:title, :subtitle, :slug, :hero_img_url, :publish_date, :updated_at, :tags)`, struct {
+	_, err = tx.NamedExec(`INSERT INTO articles (title, subtitle, author, slug, hero_img_url, published_date, updated_at, tags) VALUES (:title, :subtitle, :author, :slug, :hero_img_url, :publish_date, :updated_at, :tags)`, struct {
 		Article
 		Tags string `db:"tags"`
 	}{

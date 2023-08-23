@@ -9,7 +9,7 @@ export default function (feedURL) {
         <input id="bmenu" type="checkbox" class="show">
         <label for="bmenu" class="burger toggle pseudo button">menu</label>
         <div class="menu">
-            <a href="https://github.com/The-Singularity-Labs"class="pseudo button icon-g">📚 Archive</a>
+            <a href="#"class="pseudo button icon-g">📚 Archive</a>
             <a href="${feedURL}"  target="_blank" class="button icon-file-code">📡 Subscribe</a>
         </div>
     </nav>
