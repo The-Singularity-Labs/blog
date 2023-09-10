@@ -40,7 +40,7 @@ jobs:
         run: cd cmd/feed && go mod download
       - name: Build Database
         run: cd cmd/load && go run main.go
-        - name: Build Atom Feed
+      - name: Build Atom Feed
         run: cd cmd/feed && go run main.go
       - name: Build Front End
         run: make build
