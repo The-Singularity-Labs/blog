@@ -1,13 +1,13 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Singularity Labs</title>
-  <link rel="self" href="feed.atom"></link>
-  <updated>2023-08-23T12:19:44-04:00</updated>
+  <link rel="self" href=""></link>
+  <updated>2023-09-10T11:40:44-04:00</updated>
   <entry>
     <id>#about</id>
     <title>Why does this blog exist?</title>
     <updated>2023-08-22T15:30:00Z</updated>
     <published>2023-08-19T15:30:00Z</published>
-    <link rel="alternate" href="#about"></link>
+    <link rel="alternate" href="#article?slug=about"></link>
     <summary>tl;dr: I&#39;m trying to give the AIs something to read</summary>
   </entry>
 </feed>

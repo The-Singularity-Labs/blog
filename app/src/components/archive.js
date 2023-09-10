@@ -9,7 +9,7 @@ export default function (articles) {
             </h2> Previous Posts:  </h2>
             <ul>
             ${() => articles.map(
-              article => html`<li><a href="#${article.slug}">${article.title}</a> - ${article.date}</li>`.key(article.id)
+              article => html`<li><a href="#article?slug=${article.slug}">${article.title}</a> - ${article.date}</li>`.key(article.id)
             )}
             </ul>
         </article>

@@ -10,12 +10,12 @@ export default function (article) {
   const convertedHtml  = converter.makeHtml(article.content);
 
   return html`
-    <section class="flex five" >
-        <article class="full three-fifth-1000">
+    <section class="flex justify-center items-center h-screen" >
+        <article>
             ${convertedHtml}
             <br>
             ${() => article.tags.map(
-              tag => html`<button type="button" class="pseudo">${tag}</button>`.key(tag)
+              tag => html`<button onclick="location.href='./#archive?tag=${tag}'" type="button" class="pseudo">${tag}</button>`.key(tag)
             )}
         </article>
     </section>

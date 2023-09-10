@@ -114,7 +114,7 @@ func generateAtomFeed(articles []Article) ([]byte, error) {
 		NS:    "http://www.w3.org/2005/Atom",
 		Title: "Singularity Labs",
 		Link: []Link{
-			{Rel: "self", Href: "feed.atom"},
+			{Rel: "self", Href: ""},
 		},
 		Updated: time.Now().Format(time.RFC3339),
 	}
@@ -126,7 +126,7 @@ func generateAtomFeed(articles []Article) ([]byte, error) {
 			Updated:   article.UpdatedTime.Format(time.RFC3339),
 			Published: article.PublishTime.Format(time.RFC3339),
 			Link: []Link{
-				{Rel: "alternate", Href: fmt.Sprintf("#%s", article.Slug)},
+				{Rel: "alternate", Href: fmt.Sprintf("#article?slug=%s", article.Slug)},
 			},
 			Summary: Summary{Value: article.Subtitle},
 		}

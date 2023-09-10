@@ -14,24 +14,71 @@ const store = reactive({
     articleSlug: undefined,
     article: null, // hero, content
     archive: [],
+    archiveFilter: "",
     dbWorker: null,
 });
+
+function hasPrefix(inputString, prefix) {
+    if (inputString === null || inputString === undefined) {
+      return false; // Return false for null or undefined inputs
+    }
+    return inputString.startsWith(prefix);
+}
+
+function removePrefix(inputString, prefix) {
+    if (inputString === null || inputString === undefined) {
+      return false; // Return false for null or undefined inputs
+    }
+
+    if (hasPrefix(inputString, prefix)) {
+        return inputString.substring(prefix.length);
+    }
+
+    return inputString;
+}
+
+function isArchiveFragment(inputString) {
+    return hasPrefix(inputString, "#archive?tag=");
+}
+
+function removeArchiveFragmentPrefix(inputString) {
+    return removePrefix(inputString, "#archive?tag=");
+}
+
+function isArticleFragment(inputString) {
+    return hasPrefix(inputString, "#article?slug=");
+}
+
+function removeArticleFragmentPrefix(inputString) {
+    return removePrefix(inputString, "#article?slug=");
+}
+
+function initAppState(){
+    if(window.location.hash) {
+        if (isArchiveFragment(window.location.hash)) {
+            store.articleSlug = null;
+            store.archiveFilter = removeArchiveFragmentPrefix(window.location.hash);
+        } else if (isArticleFragment(window.location.hash)) {
+            store.articleSlug = removeArticleFragmentPrefix(window.location.hash);
+            store.archiveFilter = "";
+        }
+    } else {
+        store.articleSlug = null;
+        store.archiveFilter = "";
+    }
+}
 
 // Always set the store articleSlug to the url fragment.
 watch(() => {
     if (store.articleSlug === undefined) {
-        if(window.location.hash) {
-            store.articleSlug = window.location.hash.replace(/^#/, "");
-        } else {
-            store.articleSlug = null;
-        }
+        initAppState();
     }
 });
 
 // Define a callback function to be executed when the fragment changes
 function handleHashChange() {
     // Get the updated fragment from the URL
-    store.articleSlug = window.location.hash;
+    initAppState();
   }
   
 // Attach the callback function to the 'hashchange' event
@@ -68,14 +115,13 @@ async function initCms() {
 function sqlResultsToObject(result) {
     converted = sqlResultsToObjects(result);
     if(!converted || converted.length == 0) {
-        throw new Error('Found now results');
+        throw new Error('Found no results');
     }
     return converted[0];
 };
 
 function sqlResultsToObjects(result) {
     results = [];
-    console.log(result);
     for (let i = 0; i < result.length; i++) {
         obj = {}
         for (let j = 0; j < result[i].columns.length; j++) {
@@ -93,6 +139,7 @@ initCms();
 // Always set the store articleSlug to the url fragment.
 watch(() => {
     if (store.dbWorker && store.articleSlug) {
+        console.log(store.articleSlug)
         store.dbWorker.db.exec(`SELECT * from articles WHERE slug = ?`, [store.articleSlug]).then((result) => {
             result = sqlResultsToObject(result);
             if (result) {
@@ -125,7 +172,12 @@ watch(() => {
         });
         // console.log("Get Articlce bytes read", await dbWorker.worker.bytesRead);
     } else if (store.dbWorker) {
-            store.dbWorker.db.exec(`SELECT * from articles ORDER BY updated_at DESC`).then((results) => {
+            let query = `SELECT * from articles ORDER BY updated_at DESC`;
+            if (store.archiveFilter !== null || store.archiveFilter !== undefined) { 
+                query = `SELECT * from articles WHERE tags LIKE '%${store.archiveFilter}%' ORDER BY updated_at DESC`;
+            }
+            console.log(query);
+            store.dbWorker.db.exec(query).then((results) => {
                 results = sqlResultsToObjects(results);
             // New array to store transformed articles
             let articles = [];
