@@ -156,7 +156,7 @@ watch(() => {
                 };
 
                 store.dbWorker.db.exec(`SELECT * from article_content WHERE article_id = ?`, [article.id]).then((rawContentResult) => {
-                    contentResult = sqlResultsToObject(rawContentResult);
+                    let contentResult = sqlResultsToObject(rawContentResult);
                     if (contentResult) {
                         article.content = contentResult.content_md;
                         store.article = article;
