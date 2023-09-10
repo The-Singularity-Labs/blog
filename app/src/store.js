@@ -27,14 +27,14 @@ function hasPrefix(inputString, prefix) {
 
 function removePrefix(inputString, prefix) {
     if (inputString === null || inputString === undefined) {
-      return false; // Return false for null or undefined inputs
+      return inputString; // Return false for null or undefined inputs
     }
 
     if (hasPrefix(inputString, prefix)) {
-        return inputString.substring(prefix.length);
+        return decodeURI(inputString.substring(prefix.length));
     }
 
-    return inputString;
+    return decodeURI(inputString);
 }
 
 function isArchiveFragment(inputString) {
@@ -122,10 +122,10 @@ function sqlResultsToObject(result) {
 
 function sqlResultsToObjects(result) {
     let results = [];
-    for (let i = 0; i < result.length; i++) {
+    for (let i = 0; i < result[0].values.length; i++) {
         let obj = {};
-        for (let j = 0; j < result[i].columns.length; j++) {
-            obj[result[i].columns[j]] = result[i].values[0][j];
+        for (let j = 0; j < result[0].columns.length; j++) {
+            obj[result[0].columns[j]] = result[0].values[i][j];
         }
         results.push(obj);
     }
@@ -177,6 +177,7 @@ watch(() => {
         }
         console.log(query);
         store.dbWorker.db.exec(query).then((rawResults) => {
+            console.log(rawResults);
             let results = sqlResultsToObjects(rawResults);
             console.log(results);
             // New array to store transformed articles

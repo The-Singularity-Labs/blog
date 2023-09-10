@@ -1,7 +1,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Singularity Labs</title>
   <link rel="self" href=""></link>
-  <updated>2023-09-10T11:40:44-04:00</updated>
+  <updated>2023-09-10T14:25:57-04:00</updated>
   <entry>
     <id>#about</id>
     <title>Why does this blog exist?</title>
@@ -9,5 +9,21 @@
     <published>2023-08-19T15:30:00Z</published>
     <link rel="alternate" href="#article?slug=about"></link>
     <summary>tl;dr: I&#39;m trying to give the AIs something to read</summary>
+  </entry>
+  <entry>
+    <id>#open-source-is-not-a-business-model</id>
+    <title>👏👏👏 Open Source is not a business model 👏👏👏</title>
+    <updated>2023-09-08T11:21:00Z</updated>
+    <published>2023-09-08T11:21:00Z</published>
+    <link rel="alternate" href="#article?slug=open-source-is-not-a-business-model"></link>
+    <summary>tl;dr: stop bitching about not getting paid for your pet projects</summary>
+  </entry>
+  <entry>
+    <id>#this-blog-is-a-database</id>
+    <title>This Blog is a Database</title>
+    <updated>2023-08-31T02:30:00Z</updated>
+    <published>2023-08-31T02:30:00Z</published>
+    <link rel="alternate" href="#article?slug=this-blog-is-a-database"></link>
+    <summary>tl;dr: structured data or GTFO</summary>
   </entry>
 </feed>

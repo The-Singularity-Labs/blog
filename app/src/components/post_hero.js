@@ -8,7 +8,7 @@ export default function (article) {
             <p class="date"><b>Last Updated:</b> ${article.date}</p>
             <h1 class="title">${article.title}</h1>
             <h4 class="subtitle"> ${article.subtitle}</h4>
-            <img src="${article.hero_img_url}" class="mx-auto"> </img>
+            <img src="${article.hero_img_url}" class="mx-auto" style="width:100%"> </img>
             </header>
         </article>
     </section>
