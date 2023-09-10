@@ -42,6 +42,8 @@ jobs:
         run: cd cmd/load && go run main.go
       - name: Build Atom Feed
         run: cd cmd/feed && go run main.go
+        - name: Get Front End Dependencies
+        run: cd app && yarn install
       - name: Build Front End
         run: make build
       - name: Setup Pages
