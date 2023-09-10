@@ -113,7 +113,7 @@ async function initCms() {
 };
 
 function sqlResultsToObject(result) {
-    converted = sqlResultsToObjects(result);
+    let converted = sqlResultsToObjects(result);
     if(!converted || converted.length == 0) {
         throw new Error('Found no results');
     }
