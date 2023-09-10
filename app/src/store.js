@@ -140,8 +140,8 @@ initCms();
 watch(() => {
     if (store.dbWorker && store.articleSlug) {
         console.log(store.articleSlug)
-        store.dbWorker.db.exec(`SELECT * from articles WHERE slug = ?`, [store.articleSlug]).then((result) => {
-            result = sqlResultsToObject(result);
+        store.dbWorker.db.exec(`SELECT * from articles WHERE slug = ?`, [store.articleSlug]).then((rawResult) => {
+            let result = sqlResultsToObject(rawResult);
             if (result) {
                 let article = {
                     id: result.id,
@@ -155,13 +155,12 @@ watch(() => {
                     metadata: {},
                 };
 
-                store.dbWorker.db.exec(`SELECT * from article_content WHERE article_id = ?`, [article.id]).then((contentResult) => {
-                    contentResult = sqlResultsToObject(contentResult);
+                store.dbWorker.db.exec(`SELECT * from article_content WHERE article_id = ?`, [article.id]).then((rawContentResult) => {
+                    contentResult = sqlResultsToObject(rawContentResult);
                     if (contentResult) {
                         article.content = contentResult.content_md;
                         store.article = article;
                     }
-
                 }).catch((error) => {
                     console.error("Rejected:", error);
                 });
