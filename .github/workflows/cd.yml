@@ -36,7 +36,7 @@ jobs:
             go-version-file: 'go.mod'
       - name: Get load dependencies
         run: cd cmd/load && go mod download
-        - name: Get feed dependencies
+      - name: Get feed dependencies
         run: cd cmd/feed && go mod download
       - name: Build Database
         run: cd cmd/load && go run main.go
