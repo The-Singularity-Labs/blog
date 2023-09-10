@@ -178,6 +178,7 @@ watch(() => {
         console.log(query);
         store.dbWorker.db.exec(query).then((rawResults) => {
             let results = sqlResultsToObjects(rawResults);
+            console.log(results);
             // New array to store transformed articles
             let articles = [];
 
