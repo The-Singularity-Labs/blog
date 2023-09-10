@@ -123,7 +123,7 @@ function sqlResultsToObject(result) {
 function sqlResultsToObjects(result) {
     let results = [];
     for (let i = 0; i < result.length; i++) {
-        obj = {}
+        let obj = {};
         for (let j = 0; j < result[i].columns.length; j++) {
             obj[result[i].columns[j]] = result[i].values[0][j];
         }
