@@ -33,7 +33,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v3
         with:
-            go-version-file: 'go.mod'
+            go-version-file: 'cmd/load/go.mod'
       - name: Get load dependencies
         run: cd cmd/load && go mod download
       - name: Get feed dependencies
