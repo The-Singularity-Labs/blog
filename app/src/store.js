@@ -172,7 +172,7 @@ watch(() => {
         // console.log("Get Articlce bytes read", await dbWorker.worker.bytesRead);
     } else if (store.dbWorker) {
         let query = `SELECT * from articles ORDER BY updated_at DESC`;
-        if (store.archiveFilter !== null || store.archiveFilter !== undefined) { 
+        if (store.archiveFilter !== null && store.archiveFilter !== undefined) { 
             query = `SELECT * from articles WHERE tags LIKE '%${store.archiveFilter}%' ORDER BY updated_at DESC`;
         }
         console.log(query);
