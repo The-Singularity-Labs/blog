@@ -7,7 +7,7 @@
 		"dev": "parcel src/index.html",
 		"serve": "parcel src/index.html",
 		"package": "parcel build --public-url /mumblr/ --dist-dir ../dist src/index.html",
-		"build": "parcel build --public-url ./ --dist-dir ../dist src/index.html"
+		"build": "parcel build --no-content-hash --public-url ./ --dist-dir ../dist src/index.html"
 	},
 	"dependencies": {
 		"@arrow-js/core": "1.0.0-alpha.9",
