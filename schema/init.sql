@@ -27,7 +27,7 @@ CREATE TABLE article_content (
     FOREIGN KEY (article_id) REFERENCES articles(article_id)
 );
 
-CREATE VIRTUAL TABLE article_search USING fts5(id, title, subtitle, tokenize="trigram");
+CREATE VIRTUAL TABLE article_search USING fts5(id, title, subtitle);
 
 pragma journal_mode = delete;
 pragma page_size = 1024;
