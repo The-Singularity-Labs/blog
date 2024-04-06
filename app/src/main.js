@@ -1,5 +1,4 @@
-import "./assets/css/picnic.min.css";
-import "./assets/css/local.css";
+import "./assets/css/pico.slate.min.css";
 import feedURL from "url:./assets/db/feed.atom";
 import store from "./store.js";
 import nav from './components/nav.js';
@@ -9,30 +8,40 @@ import archiveHeroImg from "url:./assets/images/library.webp";
 import post from './components/post.js';
 import postHero from './components/post_hero.js';
 
-import { html } from '@arrow-js/core'
+import { html} from '@arrow-js/core'
 
 
 const appElement = document.getElementById('app');
 
 const template = html`
-${() => nav(feedURL)}
-<main id="home" class="app">
-    ${() => {
-        if (store.articleSlug && store.article) {
-            return postHero(store.article);
-        } else {
-            return archiveHero(archiveHeroImg);
-        }
-    }}
-    ${() => {
-        if (store.articleSlug && store.article) {
-            return post(store.article);
-        } else {
-            return archive(store.archive);
-        }
-    }}
-</section>
+<header class="container">
+    ${() => nav(feedURL, store.isLightMode, () => {store.isLightMode = !store.isLightMode} )}
+</header>
+<main id="home" class="container">
+    <div style="display: grid; grid-template-columns:1fr 2fr 1fr;">
+        <div>
+        </div>
+        <div>
+            ${() => {
+                if (store.articleSlug && store.article) {
+                    return postHero(store.article);
+                } else {
+                    return archiveHero(archiveHeroImg);
+                }
+            }}
+        ${() => {
+            if (store.articleSlug && store.article) {
+                return post(store.article);
+            } else {
+                return archive(store.archive);
+            }
+        }}
+        </div>
+        <div>
+        </div>
+    </div>
 </main>
+</div>
 `
 
 template(appElement)

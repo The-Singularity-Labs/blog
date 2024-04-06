@@ -6,7 +6,7 @@ subtitle: "tl;dr: structured data or GTFO"
 hero_img_url: "https://3fhatwtanyvncclhjq6bq2xt57hjdoxkdhx2egwbgpslqsunwqlq.arweave.net/2U4J2mBuKtEJZ0w8GGrz786RuuoZ76IawTPkuEqNtBc"
 published: 2023-08-31T02:30:00Z
 updated: 2023-08-31T02:30:00Z
-tags: ["ai", "data", "sql", "singularity labs"]
+tags: ["ai", "data", "sql", "singularity labs", "about"]
 ---
 
 If the recent advancements in technology have taught us anything, it's that we live in a time of profound shifts, where the lines between technology, information and user experience are being continually redrawn. This blog isn’t just a collection of my thoughts, musings, and updates; it's a representation of this shift.

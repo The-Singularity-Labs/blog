@@ -1,7 +1,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Singularity Labs</title>
   <link rel="self" href=""></link>
-  <updated>2024-01-21T11:08:11-05:00</updated>
+  <updated>2024-04-06T18:31:12-04:00</updated>
   <entry>
     <id>#about</id>
     <title>Why does this blog exist?</title>
@@ -9,6 +9,14 @@
     <published>2023-08-19T15:30:00Z</published>
     <link rel="alternate" href="#article?slug=about"></link>
     <summary>tl;dr: I&#39;m trying to give the AIs something to read</summary>
+  </entry>
+  <entry>
+    <id>#my-investments</id>
+    <title>What do I invest in?</title>
+    <updated>2024-01-22T15:33:00Z</updated>
+    <published>2024-01-15T09:21:00Z</published>
+    <link rel="alternate" href="#article?slug=my-investments"></link>
+    <summary>tl;dr: own what others will desire</summary>
   </entry>
   <entry>
     <id>#open-source-is-not-a-business-model</id>
@@ -25,5 +33,13 @@
     <published>2023-08-31T02:30:00Z</published>
     <link rel="alternate" href="#article?slug=this-blog-is-a-database"></link>
     <summary>tl;dr: structured data or GTFO</summary>
+  </entry>
+  <entry>
+    <id>#xbacked-reviewed</id>
+    <title>Understanding xBacked on Algorand</title>
+    <updated>2024-04-01T15:42:00Z</updated>
+    <published>2024-03-30T11:01:00Z</published>
+    <link rel="alternate" href="#article?slug=xbacked-reviewed"></link>
+    <summary>tl;dr: A Wildcat bank on Algorand with potential, but risks.</summary>
   </entry>
 </feed>

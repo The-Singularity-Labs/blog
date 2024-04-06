@@ -6,7 +6,7 @@ subtitle: "tl;dr: stop bitching about not getting paid for your pet projects"
 hero_img_url: "https://qc5xczczyendfjcu6m6sehtmkmw7yub756u75siwrky7xkcdbjxa.arweave.net/gLtxZFnBGjKkVPM9Ih5sUy38UD_vqf7JFoqx-6hDCm4"
 published: 2023-09-08T11:21:00Z
 updated: 2023-09-08T11:21:00Z
-tags: ["tech industry", "open source", "singularity labs"]
+tags: ["tech", "open source", "singularity labs"]
 ---
 
 Open source and its licensing implications have been a pivotal topic in the software industry, with notable examples like Elastic and Hashicorp adjusting product licenses to ward off competitors. Today, I aim to share my thoughts on what I believe open source truly signifies, its alignment with business models, and the innovative approaches within the industry.

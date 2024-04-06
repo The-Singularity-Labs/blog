@@ -1,17 +1,19 @@
 import { html } from '@arrow-js/core'
 
-export default function (feedURL) {
+export default function (feedURL, isLightMode, lightModeTogle) {
   return html`
     <nav>
-        <a href="https://github.com/The-Singularity-Labs"  target="_blank"  class="brand">
-            <span>Singularity Labs</span>
-        </a>
-        <input id="bmenu" type="checkbox" class="show">
-        <label for="bmenu" class="burger toggle pseudo button">menu</label>
-        <div class="menu">
-            <a href="#"class="pseudo button icon-g">📚 Archive</a>
-            <a href="${feedURL}"  target="_blank" class="button icon-file-code">📡 Subscribe</a>
-        </div>
+      <ul>
+        <li>        <a href="https://github.com/The-Singularity-Labs"  target="_blank">
+        <strong>Singularity Labs</strong>
+    </a></li>
+      </ul>
+      <ul>
+        <li><a href="#">📚 Archive</a></li>
+        <li><a href="${feedURL}"  target="_blank">📡 Subscribe</a></li>
+        <li     @click="${() => {lightModeTogle()}}">${() => {return isLightMode ? "☀️" : "🌙"}}</li>
+      </ul>
     </nav>
+    <nav>
   `
 }

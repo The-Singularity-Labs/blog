@@ -16,6 +16,7 @@ const store = reactive({
     archive: [],
     archiveFilter: "",
     dbWorker: null,
+    isLightMode: true,
 });
 
 function hasPrefix(inputString, prefix) {
@@ -67,6 +68,15 @@ function initAppState(){
         store.archiveFilter = "";
     }
 }
+
+// Always set the darkness mode
+store.$on('isLightMode', (isLightMode) => {
+    if (store.isLightMode === false) {
+        document.documentElement.setAttribute('data-theme', "dark");
+    } else {
+        document.documentElement.setAttribute('data-theme', "light");
+    }
+});
 
 // Always set the store articleSlug to the url fragment.
 watch(() => {

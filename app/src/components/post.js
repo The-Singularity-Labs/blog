@@ -10,14 +10,16 @@ export default function (article) {
   const convertedHtml  = converter.makeHtml(article.content);
 
   return html`
-    <section class="flex justify-center items-center h-screen" >
-        <article>
-            ${convertedHtml}
-            <br>
-            ${() => article.tags.map(
-              tag => html`<button onclick="location.href='./#archive?tag=${tag}'" type="button" class="pseudo">${tag}</button>`.key(tag)
-            )}
-        </article>
+    <section>
+          ${convertedHtml}
+    </section>
+    <hr />
+    <section>
+    <div class="grid">
+          ${() => article.tags.map(
+            tag => html`<div><button onclick="location.href='./#archive?tag=${tag}'" type="button" class="pseudo">${tag}</button></div>`.key(tag)
+          )}
+    </div>
     </section>
   `
 }
