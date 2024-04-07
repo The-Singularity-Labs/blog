@@ -3,7 +3,7 @@ slug: xbacked-reviewed
 author: pescennius
 title: Understanding xBacked on Algorand
 subtitle: "tl;dr: A Wildcat bank on Algorand with potential, but risks."
-hero_img_url: "https://54y36q5ah62xvwmt3bmaoefjgmoefspydxkyqspgrhl3q3ftod6a.arweave.net/7zG_Q6A_tXrZk9hYBxCpMxxCyfgd1YhJ5onXuGyzcPw"
+hero_img_url: "https://pensieve.ngrok.io/7zG_Q6A_tXrZk9hYBxCpMxxCyfgd1YhJ5onXuGyzcPw"
 published: 2024-03-30T11:01:00Z
 updated: 2024-04-01T15:42:00Z
 tags: ["crypto", "stablecoins", "investing", "algorand", "defi"]

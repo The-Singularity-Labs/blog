@@ -3,7 +3,7 @@ slug: this-blog-is-a-database
 author: pescennius
 title: This Blog is a Database
 subtitle: "tl;dr: structured data or GTFO"
-hero_img_url: "https://3fhatwtanyvncclhjq6bq2xt57hjdoxkdhx2egwbgpslqsunwqlq.arweave.net/2U4J2mBuKtEJZ0w8GGrz786RuuoZ76IawTPkuEqNtBc"
+hero_img_url: "https://pensieve.ngrok.io/2U4J2mBuKtEJZ0w8GGrz786RuuoZ76IawTPkuEqNtBc"
 published: 2023-08-31T02:30:00Z
 updated: 2023-08-31T02:30:00Z
 tags: ["ai", "data", "sql", "singularity labs", "about"]

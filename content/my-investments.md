@@ -3,7 +3,7 @@ slug: my-investments
 author: pescennius
 title: What do I invest in?
 subtitle: "tl;dr: own what others will desire"
-hero_img_url: "https://5mtc4u7y3grluk6dxlprvhc3e5i2wov7t63k7gaevtouevluf5ia.arweave.net/6yYuU_jZororw7rfGpxbJ1GrOr-ftq-YBKzdQlV0L1A"
+hero_img_url: "https://pensieve.ngrok.io/6yYuU_jZororw7rfGpxbJ1GrOr-ftq-YBKzdQlV0L1A"
 published: 2024-01-15T09:21:00Z
 updated: 2024-01-22T15:33:00Z
 tags: ["crypto", "investing", "arweave", "algorand", "me"]
@@ -69,7 +69,7 @@ My admiration for Algorand is profound, stemming from its implementation of sort
 
 ### Arweave
 
-[Arweave](https://www.arweave.org/) is an incredible idea. The idea of permanent storage and its so elegantly conceptualized. Arweave embodies my investment thesis, "own what others will desire". I believe I'm very early but human beings crave immortality and Arweave is an actual product offering people the ability to cement their [legacies](https://acvydk5fvmg3onipgalooiwk5fl2on3wlls3zxfbyhyfdbmx3zua.arweave.net/AKuBq6WrDbc1DzAW5yLK6VenN3Za5bzcocHwUYWX3mg). Arweave is the network I can conceptualize the most ways to build on top of and the only one I've contributed to personally. I don't know if will be greatest investment, but it might be the most impactful technology.
+[Arweave](https://www.arweave.org/) is an incredible idea. The idea of permanent storage and its so elegantly conceptualized. Arweave embodies my investment thesis, "own what others will desire". I believe I'm very early but human beings crave immortality and Arweave is an actual product offering people the ability to cement their [legacies](https://acvydk5fvmg3onipgalooiwk5fl2on3wlls3zxfbyhyfdbmx3zua.pensieve.ngrok.io/AKuBq6WrDbc1DzAW5yLK6VenN3Za5bzcocHwUYWX3mg). Arweave is the network I can conceptualize the most ways to build on top of and the only one I've contributed to personally. I don't know if will be greatest investment, but it might be the most impactful technology.
 
 ### Why I might be wrong
 

@@ -3,7 +3,7 @@ slug: open-source-is-not-a-business-model
 author: pescennius
 title: 👏👏👏 Open Source is not a business model 👏👏👏
 subtitle: "tl;dr: stop bitching about not getting paid for your pet projects"
-hero_img_url: "https://qc5xczczyendfjcu6m6sehtmkmw7yub756u75siwrky7xkcdbjxa.arweave.net/gLtxZFnBGjKkVPM9Ih5sUy38UD_vqf7JFoqx-6hDCm4"
+hero_img_url: "https://pensieve.ngrok.io/gLtxZFnBGjKkVPM9Ih5sUy38UD_vqf7JFoqx-6hDCm4"
 published: 2023-09-08T11:21:00Z
 updated: 2023-09-08T11:21:00Z
 tags: ["tech", "open source", "singularity labs"]
