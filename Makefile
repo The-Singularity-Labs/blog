@@ -7,6 +7,7 @@ all: build server
 build:
 	# $(foreach file, $(wildcard content/*.md), pandoc --from markdown-markdown_in_html_blocks+raw_html --standalone  $(file) -c picnic.min.css --template static/template.html -o public/$(basename $(notdir $(file:.md=))).html)
 	rm -rf dist/*
+	rm -rf app/.parcel-cache
 	cd app && yarn build
 	
 dev: feed
