@@ -3,7 +3,7 @@ slug: xbacked-reviewed
 author: pescennius
 title: Understanding xBacked on Algorand
 subtitle: "tl;dr: A Wildcat bank on Algorand with potential, but risks."
-hero_img_url: "https://4bmj5l7hj4p2ri6fv7k5q622kxkgig2ogouqa37fs5nunk5osuaa.arweave.net/4Fier-dPH6ijxa_V2HtaVdRkG04zqQBv5ZdbRquulQA"
+hero_img_url: "https://54y36q5ah62xvwmt3bmaoefjgmoefspydxkyqspgrhl3q3ftod6a.arweave.net/7zG_Q6A_tXrZk9hYBxCpMxxCyfgd1YhJ5onXuGyzcPw"
 published: 2024-03-30T11:01:00Z
 updated: 2024-04-01T15:42:00Z
 tags: ["crypto", "stablecoins", "investing", "algorand", "defi"]
@@ -11,7 +11,7 @@ tags: ["crypto", "stablecoins", "investing", "algorand", "defi"]
 
 ## What is xBacked?
 
-xBacked is a collateralized lending platform on the Algorand blockchain that is very similar to Maker in the Ethereum ecosystem. xBacked allows users borrow a digital dollar, named xUSD, by locking up other digital assets as collateral. This process resembles a securitized loan you might take from a bank, but in the digital world, it's known as a [Collateralized Debt Position (CDP)](https://coinmarketcap.com/academy/glossary/collateralized-debt-position-cdp). Each xUSD is pegged to $1, backed by a $1 worth of collateral in xBacked's smart contracts on the Algorand blockchain.
+xBacked is a collateralized lending platform on the Algorand blockchain that is very similar to Maker in the Ethereum ecosystem. xBacked allows users borrow a digital dollar, named [xUSD](https://explorer.perawallet.app/asset/760037151/), by locking up other digital assets as collateral. This process resembles a [securitized loan you might take from a bank](https://www.bankrate.com/loans/personal-loans/what-is-a-secured-loan/), but in the digital world, it's known as a [Collateralized Debt Position (CDP)](https://coinmarketcap.com/academy/glossary/collateralized-debt-position-cdp). Each xUSD is pegged to $1, backed by a $1 worth of collateral in [xBacked's smart contracts](https://app.xbacked.io/analytics) on the Algorand blockchain.
 
 ## The Mechanics: How Does xBacked Work?
 
@@ -21,11 +21,11 @@ In this scenario, your comic book collection is the collateral—something valua
 
 Translating this to xBacked: your digital assets (like cryptocurrency) are the comic book collection, and the xUSD you receive is like the laptop. You're not selling your assets but using them to get something else you need, with the plan to reclaim them later by repaying the xUSD you borrowed, plus a small fee, akin to giving the laptop back to get your collection once again. This system allows you to leverage your assets without permanently parting with them, mirroring how collateralized lending works in the real world, but within the digital financial landscape of xBacked.
 
-There is a critical difference between how xBacked works and how the example works. The xUSD you borrowed did not exist before you borrowed it. You are not borrowing it from someone who already owns xUSD, the xUSD you borrowed was actually minted out of thin air. This works because the xUSD you are borrowing is being borrowed from your future self. The loan is "over-collateralized" because you have more collateral than the value of the loan. So you are essentially prepaying back the loan and its interest. If you don't make payments, its fine because the smart contract can use your collateral as payment.  As long as the debt is less than the asset, then everything nets out positive. This is actually very similar to how real world [commercial banks create virtual US dollars](https://www.youtube.com/watch?v=cDNSNX48Kmo&t=297s).
+There is a critical difference between how xBacked works and how the example works. The xUSD you borrowed did not exist before you borrowed it. You are not borrowing it from someone who already owns xUSD, the xUSD you borrowed was actually minted out of thin air by the smart contract. This works because the xUSD you are borrowing is being borrowed from your future self. The loan is "over-collateralized" because you have more collateral than the value of the loan. So you are essentially prepaying back the loan and its interest. If you don't make payments, its fine because the smart contract can use your collateral as payment.  As long as the debt is less than the asset, then everything nets out positive. This is actually very similar to how real world [commercial banks create virtual US dollars](https://www.youtube.com/watch?v=cDNSNX48Kmo&t=297s).
 
 ## Why would someone use xBacked?
 
-xBacked and other lending platforms like Folks Finance give DeFi users the opportunity to "be their own bank". This is a permissionless platform where its possible to execute lending activities without any prior approval. In theory, as these platforms mature, we can have versions of our existing financail services that are far less suceptible to manipulation and corruption.  
+xBacked and other lending platforms like Folks Finance give DeFi users the opportunity to "be their own bank". You are borrowing from yourself, and so don't need a counterparty to get access to credit. In theory, as these platforms mature, we can have versions of our existing financail services that are far less suceptible to manipulation and corruption.  
 
 ### Opportunities:
 
@@ -37,15 +37,17 @@ xBacked and other lending platforms like Folks Finance give DeFi users the oppor
 
 **Commodity Collateral:** The interest spreads can be exploited further by using stable assets like Meld Gold and Silver as collateral. Unlike native cryptos, they experience far less price volatility and so therefore far less chance of a margin call. These are among the most popular collaterals on xBacked, partly because they offer a predictable way to engage in carry trades. These can also be leveraged the same way as ALGO.
 
-**Yield Farming:** xUSD can be bought on the open market without borrowing via a vault. Buying and holding xUSD is buying a claim on the underlying assets and therefore the risk those assets lose value. In exchange, there are opportunities to earn yield via liquidity pools. 
+**Yield Farming:** xUSD can be bought on the open market without borrowing via a vault. Buying and holding xUSD is buying a claim on the underlying assets and therefore the risk those assets lose value. In exchange, there are [opportunities to earn yield](https://app.tinyman.org/#/pool/farming-programs) via [liquidity pools](https://app.pact.fi/farms). 
 
-**Arbitrage:** The price of xUSD will oscillate above and below its $1 peg depending on the supply and demand at any given time. Users with high confidence in the long term stability can buy when the price is under $1 and sell when it is above $1 as an arbitrage trade.
+**Arbitrage:** The price of xUSD will [oscillate above and below its $1 peg](https://vestige.fi/asset/760037151) depending on the supply and demand at any given time. Users with high confidence in the long term stability can buy when the price is under $1 and sell when it is above $1 as an arbitrage trade.
 
 ### Risks:
 
-Most of the catostrophic risks are concentrated around scenarios where xUSD depegs and isn't tradable for $1 worth of assets or where lender collateral is lost and the protocol defaults. Like with any investing, there are also risks of losing money on bad trades. 
+Any opportunity to earn yield is going to come with proportional risk. There are a number of risks to be cautious of in regards to the xBacked platform. 
 
-**Smart Contract Risk:** While not unique to xBacked, this is a real and relevant risk in the space. [Someone has at least looked at some of these contracts](https://github.com/xBacked-DAO/xbacked-audits), but its not clear if there has been more recent audits than 2022.
+**Smart Contract Risk:** While not unique to xBacked, this is a real and relevant risk in all of DeFi. [Someone has at least looked at some of these contracts](https://github.com/xBacked-DAO/xbacked-audits), but its not clear if there has been more recent audits than 2022. This alone is a reason to be very cautious with this protocol. 
+
+**Margin Calls:** Borrowing xUSD succesfully depends on your collateral holding its value. Many of the tokens allowed as collateral aren't stablecoins. Some are liquid staking tokens and wrapped tokens that carry their own smart contract and protocol risks. While the majority of the current collateral is Meld Gold or Silver, its unclear if these tokens will hold value if there is sustained selling pressure. They can [only be redeemed in one location in Australia](https://www.meld.gold/convert), and so its unclear if markets are efficient enough to properly take advantage of the arbitrage that's supposed to maintain the peg. 
 
 **Rates Will Change:** While borrowing costs are currently attractive, they can and almost certainly will increase, potentially eliminating the profitability of a number of trades. 3% is not a long term sustainable rate and likely only exists as a way to attract users. In the long run, the xUSD rate can't vary too much from the market USDC borrowing rate. As the rate stays low, people generate more xUSD to arbitrage it, the peg will eventually break.
 
@@ -65,13 +67,13 @@ I hope to see xUSD be the solution to critical inefficiency in the current DeFi 
 
 ## How I'm using xBacked:
 
-**Leveraged Gold and Silver Trades:** I do like to have exposure to gold but I prefer to hold my long term holdings physically. I still see risks with Meld gold but I don't mind holding small amounts of it as collateral for some short term leveraged gold trades. That's gone well for me this year as central banks have been on a gold buying spree.
+**Leveraged Gold and Silver Trades:** I do like to have exposure to gold but I prefer to hold my long term holdings physically. I still see risks with Meld gold but I don't mind holding small amounts of it as collateral for some short term leveraged gold trades. That's gone well for me this year as [central banks have been on a gold buying spree](https://www.axios.com/2024/01/31/central-banks-buy-gold).
 
-**Leveraged Liquid Governance:** xBacked is the cheapest platform I trust, where I can make leveraged ALGO buys. I can also use liquid staking tokens like mALGO as collateral, raising potential earnings. 
+**Leveraged Liquid Governance:** xBacked is the cheapest platform I know of, where I can make leveraged ALGO trades. I can also use liquid staking tokens like mALGO as collateral, raising potential earnings. 
 
 **Carry trades:** Borrowing xUSD to invest in high-return, low-risk venues outside of DeFi has been some of the easiest money I've made in a while. For example borrowing xUSD and cashing that out into a money market fund for a 2% spread. I have doubts this will remain the case because as the market catches on, rates are going to have to increase to defend the peg. 
 
 ## Final Thoughts:
 
-xBacked is new, a bit raw, but could be promising. That being said, I wouldn't put any money into it you aren't fully comfortable losing. I think the core challenge for the team now is avoiding the pitfalls other projects have made. Namely not being conservative enough on risk management and trying to manage the system parameters through voting based governance system rather than algorithmically. Separately, I'm trying my hand at writing something like this just to exercise my own understanding. Maybe I'll do one for Algomint or Meld Gold if there ends up being any interest.
+xBacked is new, a bit raw, but could be promising. That being said, I wouldn't put any money into it you aren't fully comfortable losing. I think the core challenge for the team now is avoiding the pitfalls other projects have made. Namely not being conservative enough on risk management and trying to manage the system parameters through voting based governance system rather than algorithmically. Separately, I'm trying my hand at writing something like this just to exercise my own understanding. I want to focus more on how these protocols work than how much I like the UI/UX. Maybe I'll do one for Algomint or Meld Gold if there ends up being any interest.
 

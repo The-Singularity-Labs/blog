@@ -19,6 +19,16 @@ const store = reactive({
     isLightMode: true,
 });
 
+// Always set the darkness mode
+document.documentElement.setAttribute('data-theme', "light");
+store.$on('isLightMode', (isLightMode) => {
+    if (store.isLightMode === false) {
+        document.documentElement.setAttribute('data-theme', "dark");
+    } else {
+        document.documentElement.setAttribute('data-theme', "light");
+    }
+});
+
 function hasPrefix(inputString, prefix) {
     if (inputString === null || inputString === undefined) {
       return false; // Return false for null or undefined inputs
@@ -68,15 +78,6 @@ function initAppState(){
         store.archiveFilter = "";
     }
 }
-
-// Always set the darkness mode
-store.$on('isLightMode', (isLightMode) => {
-    if (store.isLightMode === false) {
-        document.documentElement.setAttribute('data-theme', "dark");
-    } else {
-        document.documentElement.setAttribute('data-theme', "light");
-    }
-});
 
 // Always set the store articleSlug to the url fragment.
 watch(() => {

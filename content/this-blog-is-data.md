@@ -19,30 +19,17 @@ Why? AI isn't just about big algorithms and powerful hardware; it's equally abou
 
 ## The Clumsy Nature of Parsing HTML
 
-Asking someone (or some machine) to parse HTML just to generate structured data about my content isn’t ideal. HTML is designed for browsers to render web pages for humans, and while it can contain structured data, it's not inherently optimized for data retrieval or analysis.
+Counter to the best efforts of many, the [semantic web has failed](https://data-mining.philippe-fournier-viger.com/the-semantic-web-and-why-it-failed/). Asking someone (or some machine) to parse HTML just to generate structured data about my content is a mess. HTML is designed for browsers to render web pages for humans, and while it can contain structured data, it's not inherently optimized for data retrieval or analysis. Imagine having to read through a thick manual when all you need is a summary. Parsing HTML to derive structured data is much the same for machines—it’s a cumbersome, inefficient process. 
 
-Imagine having to read through a thick manual when all you need is a summary. Parsing HTML to derive structured data is much the same for machines—it’s a cumbersome, inefficient process.
 
-## The World of CMS and Databases
+## The Blog as a Database
 
-Almost every blog out there relies on a Content Management System (CMS), like WordPress. Behind the scenes, these platforms are powered by databases that store all the content. Everything you see on a blog—each post, comment, image—resides in a database.
+Almost every blog out there relies on a [Content Management System (CMS)](https://www.wikiwand.com/en/Content_management_system), like [WordPress](https://wordpress.com/). Behind the scenes, these platforms are powered by databases that store all the content. Everything you see on a blog—each post, comment, image—resides in a database. So, what if we reconsider the concept of a blog not just as a platform for words and pictures but as a live, accessible database?
 
-So, what if we reconsider the concept of a blog not just as a platform for words and pictures but as a live, accessible database?
+I introduced mumblr, a small [Single Page Application (SPA)](https://www.wikiwand.com/en/Single-page_application), as a response to the gaps I saw in traditional blogging platforms. While many blogs hide their underlying databases, mumblr does the opposite. It merges the CMS database with the frontend, publishing it as static content. [Leveraging HTTP Range queries](https://phiresky.github.io/blog/2021/hosting-sqlite-databases-on-github-pages/), queries to the CMS database can be made without loading the entire CMS database into the client's memory.
 
-## Enter mumblr: Where Static Meets Dynamic
-
-I introduced mumblr, a small Single Page Application (SPA), as a response to the gaps I saw in traditional blogging platforms. While many blogs hide their underlying databases, mumblr does the opposite. It merges the CMS database with the frontend, publishing it as static content.
-
-What does this mean for you? More than you might think.
-
-## Your Personal Access to My Blog's Database
-
-With mumblr, anyone can bypass the site's frontend entirely and directly download the SQLite database. This database is a structured, machine-readable representation of all the content on this blog.
-
-If you're a developer or data enthusiast, the possibilities here are immense. Fancy building your custom viewer tailored to how you want to consume the content? Go for it! Prefer to analyze the data using SQL or an app like DBeaver? The power is yours.
+With mumblr, anyone can bypass the site's frontend entirely and directly download the SQLite database containg all the content. This database is a structured, machine-readable representation of all the content on this blog. If you're a developer or data enthusiast, the possibilities here are immense. Fancy building your custom viewer tailored to how you want to consume the content? Go for it! Prefer to analyze the data using SQL or an app like DBeaver? The power is yours.
 
 ## In Conclusion
 
-Blogs have always been more than just places for words; they are platforms of expression, learning, and now, more than ever, data. By treating this blog as an open database, I'm inviting you all to interact with my content in ways that resonate most with you—whether that's through reading, analyzing, or building upon it.
-
-After all, in today's digital age, shouldn’t data be as dynamic and versatile as the thoughts it encapsulates?
+Blogs have always been more than just places for words; they are platforms of expression, learning, and now, more than ever, data. By treating this blog as an open database, I'm inviting you all to interact with my content in ways that resonate most with you—whether that's through reading, analyzing, or building upon it. After all, in today's digital age, shouldn’t data be as dynamic and versatile as the thoughts it encapsulates?

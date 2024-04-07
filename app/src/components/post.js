@@ -13,7 +13,7 @@ export default function (article) {
     <section>
           ${convertedHtml}
     </section>
-    <hr />
+    </ hr>
     <section>
     <div class="grid">
           ${() => article.tags.map(

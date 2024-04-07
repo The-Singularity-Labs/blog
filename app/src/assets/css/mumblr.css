@@ -1,0 +1,6 @@
+@media (min-width: 768px) { /* Adjust as needed for mobile break point */
+    .grid-container {
+        display: grid;
+        grid-template-columns:1fr 2fr 1fr; 
+    }
+}

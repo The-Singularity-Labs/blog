@@ -1,4 +1,5 @@
 import "./assets/css/pico.slate.min.css";
+import "./assets/css/mumblr.css";
 import feedURL from "url:./assets/db/feed.atom";
 import store from "./store.js";
 import nav from './components/nav.js';
@@ -18,7 +19,7 @@ const template = html`
     ${() => nav(feedURL, store.isLightMode, () => {store.isLightMode = !store.isLightMode} )}
 </header>
 <main id="home" class="container">
-    <div style="display: grid; grid-template-columns:1fr 2fr 1fr;">
+    <div class="grid-container">
         <div>
         </div>
         <div>

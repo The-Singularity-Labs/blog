@@ -5,7 +5,7 @@ export default function (articles) {
 
   return html`
     <section >
-      <div class="container-fluid col col-6">
+      <div class="container-fluid .grid-container">
             <h6> Previous Posts:  </h6>
             <ul>
             ${() => articles.map(
